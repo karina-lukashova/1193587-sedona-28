@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav aria-label="Навигация по сайту городка Седона">
         <a>
           <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
         </a>
@@ -27,15 +27,15 @@
       </nav>
     </header>
     <main>
-      <h1>Городок Седона</h1> <!--Скрытый заголовок-->
+      <h1 class="visually-hidden">Городок Седона</h1> <!--Скрытый заголовок-->
       <img src="img/welcome.svg" width="457" height="351" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
       <section>
-        <h2>О городке</h2> <!--Скрытый заголовок-->
+        <h2 class="visually-hidden">О городке</h2> <!--Скрытый заголовок-->
         <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
       <section>
-        <h2>Преимущества городка Седона</h2> <!--Скрытый заголовок-->
+        <h2 class="visually-hidden">Преимущества городка Седона</h2> <!--Скрытый заголовок-->
         <ul>
           <li>
             <div>
@@ -92,12 +92,44 @@
         </p>
         <button type="button">Поиск гостиницы в Седоне</button>
         <section>
-          <h3>Поиск гостиницы в Седоне</h3> <!--Скрытый заголовок-->
-          <!--Здесь будет форма поиска гостиницы в Седоне-->
+          <h3 class="visually-hidden">Поиск гостиницы в Седоне</h3> <!--Скрытый заголовок-->
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <div>
+              <label for="arrive-date-field">Дата заезда:</label>
+              <div>
+                <input type="text" name="arrive-date" id="arrive-date-field" value="24 апреля 2017" required>
+                <button type="button" aria-label="Открыть календарь для выбора даты">Календарь</button>
+              </div>
+            </div>
+            <div>
+              <label for="depart-date-field">Дата выезда:</label>
+              <div>
+                <input type="text" name="depart-date" id="depart-date-field" value="4 июля 2017" required>
+                <button type="button" aria-label="Открыть календарь для выбора даты">Календарь</button>
+              </div>
+            </div>
+            <div>
+              <label for="adults-number-field">Взрослые:</label>
+              <div>
+                <button type="button" aria-label="Уменьшить количество человек на один">-</button>
+                <input type="text" name="adults-number" id="adults-number-field" value="2" pattern="^[ 0-9]+$" required>
+                <button type="button" aria-label="Увеличить количество человек на один">+</button>
+              </div>
+            </div>
+            <div>
+              <label for="children-number-field">Дети:</label>
+              <div>
+                <button type="button" aria-label="Уменьшить количество человек на один">-</button>
+                <input type="text" name="children-number" id="children-number-field" value="0" pattern="^[ 0-9]+$" required>
+                <button type="button" aria-label="Увеличить количество человек на один">+</button>
+              </div>
+            </div>
+            <button type="submit">Найти</button>
+          </form>
         </section>
       </section>
       <section>
-        <h2>Как нас найти</h2> <!--Скрытый заголовок-->
+        <h2 class="visually-hidden">Как нас найти</h2> <!--Скрытый заголовок-->
         <img src="img/map.jpg" width="1199" height="594" alt="Адрес Седоны на Карте: США, Аризона 86336"> <!--Здесь будет карта-->
       </section>
     </main>
@@ -108,7 +140,7 @@
         <a href="tel:+74956660166">+7(495) 666-01-66</a>
       </p>
       <section>
-        <h2>Мы в социальных сетях</h2> <!--Скрытый заголовок-->
+        <h2 class="visually-hidden">Мы в социальных сетях</h2> <!--Скрытый заголовок-->
         <ul>
           <li>
             <a href="">Twitter</a>
