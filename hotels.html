@@ -30,7 +30,60 @@
       <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1> <!--Скрытый заголовок-->
       <section>
         <h2 class="visually-hidden">Фильтры для поиска гостиницы</h2> <!--Скрытый заголовок-->
-        <!--Здесь будет форма поиска гостиницы с фильтрами-->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="pool-field" checked>
+                <label for="pool-field">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="parking-field">
+                <label for="parking-field">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wifi" id="wifi-field">
+                <label for="wifi-field">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="hotel-field" checked>
+                <label for="hotel-field">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="motel-field" checked>
+                <label for="motel-field">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartments" id="apartments-field" checked>
+                <label for="apartments-field">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <div>
+              <label for="min-price-field">От</label>
+              <input type="text" name="min-price" id="min-price-field" value="0" pattern="^[ 0-9]+$">
+              <label for="max-price-field">До</label>
+              <input type="text" name="max-price" id="max-price-field" value="3000" pattern="^[ 0-9]+$">
+            </div>
+            <div>
+              <div tabindex="0">
+                <span class="visually-hidden">Минимальная стоимость</span>
+              </div>
+              <div tabindex="0">
+                <span class="visually-hidden">Максимальная стоимость</span>
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
         <h2 class="visually-hidden">Сортировка найденных гостиниц</h2> <!--Скрытый заголовок-->
@@ -49,10 +102,10 @@
         </ul>
         <ul>
           <li>
-            <a href="">Сортировка от меньшего к большему</a> <!--Через CSS заменим на стрелочку (как с соц. сетями)-->
+            <a href="" aria-label="Сортировка от меньшего к большему"></a> <!--Через CSS вставим стрелочку-->
           </li>
           <li>
-            <a href="">Сортировка от большего к меньшему</a> <!--Через CSS заменим на стрелочку (как с соц. сетями)-->
+            <a href="" aria-label="Сортировка от большего к меньшему"></a> <!--Через CSS вставим стрелочку-->
           </li>
         </ul>
       </section>
@@ -66,7 +119,9 @@
             <img src="img/amara-resort.jpg" width="135" height="90" alt="Двор гостиницы Amara Resort & Spa">
             <p>Гостиница</p>
             <p>От 4000 р.</p>
-            <p>4 звезды</p> <!--Через CSS заменим на иконки звезд (как с соц. сетями)-->
+            <p>
+              <span class="visually-hidden">4 звезды</span> <!--Через CSS вставим звезды-->
+            </p>
             <p>Рейтинг: 8,5</p>
             <a href="">Подробнее</a>
             <a href="">Забронировать</a>
@@ -78,7 +133,9 @@
             <img src="img/desert-quail.jpg" width="135" height="90" alt="Вид на гостиницу Desert Quail Inn">
             <p>Мотель</p>
             <p>От 3000 р.</p>
-            <p>3 звезды</p> <!--Через CSS заменим на иконки звезд (как с соц. сетями)-->
+            <p>
+              <span class="visually-hidden">3 звезды</span> <!--Через CSS вставим звезды-->
+            </p>
             <p>Рейтинг: 8,9</p>
             <a href="">Подробнее</a>
             <a href="">Забронировать</a>
@@ -90,7 +147,9 @@
             <img src="img/villas-diablo.jpg" width="135" height="90" alt="Территория гостиницы Villas at Poco Diablo">
             <p>Апартаменты</p>
             <p>От 2000 р.</p>
-            <p>2 звезды</p> <!--Через CSS заменим на иконки звезд (как с соц. сетями)-->
+            <p>
+              <span class="visually-hidden">2 звезды</span> <!--Через CSS вставим звезды-->
+            </p>
             <p>Рейтинг: 9,2</p>
             <a href="">Подробнее</a>
             <a href="">Забронировать</a>
@@ -120,7 +179,9 @@
       </section>
       <p>
         Website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
+        </a>
       </p>
     </footer>
   </body>
