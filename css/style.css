@@ -117,7 +117,7 @@ img {
 /* Intro to Sedona with background on main*/
 
 .site-intro {
-  background-color: var(--dark-brown);
+  background-color: var(--dark-blue);
   background-image: 
     url("../img/mask.svg"),
     url("../img/background.jpg");
@@ -135,14 +135,14 @@ img {
   box-shadow: 0px 5px 15px var(--site-transparent-black);
 }
 
-.about-town p:first-of-type {
+.about-sedona {
   color: var(--black);
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
 }
 
-.about-town p:nth-of-type(2) {
+.reasons-intro {
   line-height: 26px;
 }
 
@@ -175,6 +175,7 @@ img {
   font-size: 21px;
   line-height: 26px;
   border: none;
+  cursor: pointer;
 }
 
 .head-booking-button {
@@ -183,7 +184,6 @@ img {
 
 .head-booking-button:hover, .head-booking-button:focus {
   background-color: var(--brown);
-  cursor: pointer;
 }
 
 .head-booking-button:active {
@@ -239,9 +239,6 @@ input[name="adults-number"], input[name="children-number"] {
 
 .form-button {
   border: none;
-}
-
-.form-button:hover {
   cursor: pointer;
 }
 
@@ -277,7 +274,6 @@ input[name="adults-number"], input[name="children-number"] {
 
 .search-booking-button:hover, .search-booking-button:focus {
   background-color: var(--blue);
-  cursor: pointer;
 }
 
 .search-booking-button:active {
