@@ -1,0 +1,438 @@
+/* Site fonts */
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+       url("../fonts/ptsans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Site colors */
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --light-black: #333333;
+  --dark-white: #EEEEEE;
+  --grey: #CACACA;
+  --dark-grey: #A9A9A9;
+  --light-beige: #F2F2F2;
+  --beige: #EBEBEB;
+  --dark-beige: #BDBBBC;
+  --grey-beige: #E5E5E5;
+  --light-brown: #766357;
+  --brown: #604E43;
+  --dark-brown: #503E33;
+  --light-blue: #81B3D2;
+  --blue: #669EC0;
+  --dark-blue: #5496BD;
+  --asphalt: #666666;
+  --dark-asphalt: #231F20;
+  --transparent-white: rgba(255, 255, 255, 0.9);
+  --super-transparent-white: rgba(255, 255, 255, 0.3);
+  --site-transparent-black: rgba(0, 1, 1, 0.2);
+  --form-transparent-black: rgba(0, 1, 1, 0.15);
+}
+
+/* Global styles */
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--light-black);
+  text-transform: uppercase;
+  background-color: var(--light-beige);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Header */
+
+.header {
+  background-color: var(--white);
+  box-shadow: 0px 5px 15px var(--site-transparent-black);
+}
+
+.site-logo {
+  text-align: center;
+}
+
+/* Navigation */
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-list a {
+  color: var(--black);
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.navigation-list a:not([href]) {
+  cursor: default;
+  color: var(--light-brown);
+}
+
+.navigation-list a[href]:hover, .navigation-list a[href]:focus {
+  color: var(--light-blue);
+}
+
+.navigation-list a[href]:active {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+/* Intro to Sedona with background on main*/
+
+.site-intro {
+  background-color: var(--dark-brown);
+  background-image: 
+    url("../img/mask.svg"),
+    url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  text-align: center;
+  /* Нужные размеры блока будут позже */
+}
+
+/* About town section */
+
+.about-town {
+  background-color: var(--white);
+  text-align: center;
+  box-shadow: 0px 5px 15px var(--site-transparent-black);
+}
+
+.about-town p:first-of-type {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.about-town p:nth-of-type(2) {
+  line-height: 26px;
+}
+
+/* Booking section */
+
+.booking {
+  text-align: center;
+  background-color: var(--white);
+  box-shadow: 0px 5px 15px var(--site-transparent-black);
+}
+
+.booking h2 {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.booking p {
+  line-height: 24px;
+}
+
+.booking-button {
+  text-align: center;
+  vertical-align: middle;
+  font: inherit;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  border: none;
+}
+
+.head-booking-button {
+  background-color: var(--light-brown);
+}
+
+.head-booking-button:hover, .head-booking-button:focus {
+  background-color: var(--brown);
+  cursor: pointer;
+}
+
+.head-booking-button:active {
+  background-color: var(--dark-brown);
+  color: var(--super-transparent-white);
+}
+
+/* Booking form */
+
+.booking-form {
+  background-color: var(--white);
+  box-shadow: 0px 7px 15px var(--form-transparent-black);
+}
+
+.booking-form label {
+  font-weight: bold;
+  line-height: 26px;
+  color: var(--black);
+}
+
+.booking-form input {
+  font: inherit;
+  background-color: var(--light-beige);
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.booking-form input:hover {
+  background-color: var(--beige);
+}
+
+.booking-form input:focus {
+  background-color: var(--white);
+  border: 2px solid var(--grey-beige);
+  outline: none;
+}
+
+input[name="adults-number"], input[name="children-number"] {
+  text-align: center;
+}
+
+.booking-form input::-webkit-input-placeholder {
+  color: var(--black);
+}
+
+.booking-form input::-moz-placeholder {
+  color: var(--black);
+}
+
+/* Booking form - buttons */
+
+.form-button {
+  border: none;
+}
+
+.form-button:hover {
+  cursor: pointer;
+}
+
+.calendar-icon svg {
+  fill: var(--dark-grey);
+}
+
+.calendar-icon:hover svg, .calendar-icon:focus svg {
+  fill: var(--black);
+}
+
+.calendar-icon:active svg {
+  fill: var(--light-blue);
+}
+
+.count-icon {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--dark-grey);
+}
+
+.count-icon:hover, .count-icon:focus {
+  color: var(--black);
+}
+
+.count-icon:active {
+  color: var(--light-blue);
+}
+
+.search-booking-button {
+  background-color: var(--light-blue);
+}
+
+.search-booking-button:hover, .search-booking-button:focus {
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.search-booking-button:active {
+  background-color: var(--dark-blue);
+  color: var(--super-transparent-white);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: var(--transparent-white);
+  box-shadow: 0px 5px 15px var(--site-transparent-black);
+}
+
+/* Footer - Contacts */
+
+.contacts {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--black)
+}
+
+.contacts a {
+  color: var(--black);
+}
+
+.contacts a:hover, .contacts a:focus {
+  color: var(--light-blue);
+}
+
+.contacts a:active {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+/* Footer - Social networks */
+
+.social ul {
+  list-style: none;
+}
+
+.social-icon {
+  background-color: var(--light-blue);
+}
+
+.social-icon:hover, .social-icon:focus {
+  background-color: var(--blue);
+}
+
+.social-icon:active {
+  background-color: var(--dark-blue);
+}
+
+.social-icon:active svg {
+  opacity: 0.3;
+}
+
+/* Footer - developer section */
+
+.developer {
+  line-height: 26px;
+}
+
+.html-logo svg {
+  fill: var(--dark-asphalt);
+}
+
+.html-logo:hover svg, .html-logo:focus svg {
+  fill: var(--light-blue);
+}
+
+.html-logo:active svg {
+  fill: var(--dark-beige);
+}
+
+
+/* Hotels page */
+
+/* Hotels list */
+
+.hotels-found {
+  background-color: var(--white);
+  box-shadow: 0px 5px 15px var(--site-transparent-black);
+}
+
+.hotels-list {
+  list-style: none;
+}
+
+.hotel-item h3 {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+
+.hotel-name {
+  color: var(--black);
+}
+
+.hotel-name:hover, .hotel-name:focus {
+  color: var(--light-blue);
+}
+
+.hotel-name:active {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+.hotel-stars {
+  background-image: url("../img/icon-star.svg");
+  background-repeat: repeat-x;
+  width: 100px;
+  height: 17px;
+}
+/* Потом через размеры настрою показ 4 звезд, 3 звезд, 2 звезд. Пока width и height сделала для того, чтобы было видно */
+
+.rating {
+  color: var(--asphalt);
+  text-align: center;
+  background-color: var(--light-beige);
+}
+
+/* Hotels buttons */
+
+.hotel-button {
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hotel-more-button {
+  background-color: var(--light-blue);
+}
+
+.hotel-more-button:hover, .hotel-more-button:focus {
+  background-color: var(--blue);
+}
+
+.hotel-more-button:active {
+  background-color: var(--dark-blue);
+  color: var(--super-transparent-white);
+}
+
+.hotel-book-button {
+  background-color: var(--light-brown);
+}
+
+.hotel-book-button:hover, .hotel-book-button:focus {
+  background-color: var(--brown);
+}
+
+.hotel-book-button:active {
+  background-color: var(--dark-brown);
+  color: var(--super-transparent-white);
+}
