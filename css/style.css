@@ -2,16 +2,16 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/ptsans.woff2") format("woff2"),
-       url("../fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans_new.woff2") format("woff2"), /* Обновила шрифты, потому что знак № в преимуществах Седоны со старыми шрифтами неверно показывался */
+       url("../fonts/ptsans_new.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/ptsansbold.woff2") format("woff2"),
-       url("../fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold_new.woff2") format("woff2"), /* Обновила шрифты, потому что знак № в преимуществах Седоны со старыми шрифтами неверно показывался */
+       url("../fonts/ptsansbold_new.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -35,12 +35,14 @@
   --light-blue: #81B3D2;
   --blue: #669EC0;
   --dark-blue: #5496BD;
+  --light-asphalt: #6A6A6A;
   --asphalt: #666666;
   --dark-asphalt: #231F20;
   --transparent-white: rgba(255, 255, 255, 0.9);
   --super-transparent-white: rgba(255, 255, 255, 0.3);
   --site-transparent-black: rgba(0, 1, 1, 0.2);
   --form-transparent-black: rgba(0, 1, 1, 0.15);
+  --sorting-transparent-black: rgba(0, 0, 0, 0.3);
 }
 
 /* Global styles */
@@ -144,6 +146,61 @@ img {
 
 .reasons-intro {
   line-height: 26px;
+}
+
+/* Benefits of Sedona */
+
+.reasons-list {
+  text-align: center;
+  list-style: none;
+  box-shadow: 0px 5px 15px var(--site-transparent-black);
+}
+
+.reasons-list h3 {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.top-reason-description {
+  color: var(--white);
+  background-color: var(--light-blue);
+}
+
+.other-reason {
+  background-color: var(--dark-white);
+}
+
+.other-reason h3 {
+  color: var(--black);
+}
+
+.first-reason-list {
+  list-style: none;
+  background-color: var(--white);
+}
+
+.first-reason-list h4 {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.reason-house {
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.reason-food {
+  background-image: url("../img/icon-food.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.reason-souvenirs {
+  background-image: url("../img/icon-souvenirs.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Booking section */
@@ -281,6 +338,13 @@ input[name="adults-number"], input[name="children-number"] {
   color: var(--super-transparent-white);
 }
 
+/* Map */
+
+.map {
+  text-align: center;
+  box-shadow: 0px 5px 15px var(--site-transparent-black);
+}
+
 /* Footer */
 .footer {
   text-align: center;
@@ -352,6 +416,110 @@ input[name="adults-number"], input[name="children-number"] {
 
 
 /* Hotels page */
+
+/* Hotels filter */
+
+.hotels-filter {
+  background-color: var(--dark-blue);
+  background-image: url(../img/filter-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--white);
+}
+
+.hotels-filter legend {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.filter-list {
+  list-style: none;
+}
+
+.price-input {
+  font: inherit;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+}
+
+.filter-button {
+  font: inherit;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: transparent;
+  border: 2px solid var(--white);
+  cursor: pointer;
+}
+
+.filter-button:hover, .filter-button:focus {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.filter-button:active {
+  color: var(--light-asphalt);
+  background-color: var(--white);
+}
+
+/* Sorting section */
+
+.sorting-section {
+  background-color: var(--white);
+}
+
+.hotels-number {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-item:not([href]) {
+  color: var(--light-blue);
+}
+
+/* Sorting buttons */
+
+.sorting-item[href] {
+  cursor: pointer;
+  color: var(--sorting-transparent-black);
+}
+/* Нижнюю рамку сделаю позже */
+
+.sorting-item[href]:hover, .sorting-item[href]:focus {
+  color: var(--light-blue);
+}
+/* Нижнюю рамку сделаю позже */
+
+.sorting-item[href]:active {
+  color: var(--black);
+}
+
+.sorting-direction-item:not([href]) svg {
+  fill: var(--light-blue);
+}
+
+.sorting-direction-item[href] svg {
+  fill: var(--grey);
+}
+
+.sorting-direction-item[href]:hover svg, .sorting-direction-item[href]:focus svg {
+  fill: var(--black);
+}
+
+.sorting-direction-item[href]:active svg {
+  fill: var(--light-blue);
+}
 
 /* Hotels list */
 
