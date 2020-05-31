@@ -185,22 +185,21 @@ img {
   font-size: 21px;
 }
 
-.reason-house {
-  background-image: url("../img/icon-house.svg");
+.first-reason-item {
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.reason-house {
+  background-image: url("../img/icon-house.svg");
 }
 
 .reason-food {
   background-image: url("../img/icon-food.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .reason-souvenirs {
   background-image: url("../img/icon-souvenirs.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* Booking section */
@@ -450,6 +449,8 @@ input[name="adults-number"], input[name="children-number"] {
   background-color: transparent;
   border: 2px solid var(--white);
   cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .filter-button:hover, .filter-button:focus {
@@ -484,13 +485,14 @@ input[name="adults-number"], input[name="children-number"] {
   list-style: none;
 }
 
-.sorting-item:not([href]) {
-  color: var(--light-blue);
-}
-
 /* Sorting buttons */
 
-.sorting-item[href] {
+.sorting-item:not([href]) {
+  color: var(--light-blue);
+  cursor: default;
+}
+
+.sorting-item {
   cursor: pointer;
   color: var(--sorting-transparent-black);
 }
