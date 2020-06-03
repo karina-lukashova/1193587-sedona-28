@@ -155,7 +155,7 @@ img {
   background-repeat: no-repeat;
   background-position: center bottom;
   text-align: center;
-  height: 509px;
+  min-height: 509px;
 }
 
 .site-intro img {
@@ -393,7 +393,7 @@ input[name="adults-number"], input[name="children-number"] {
   background-color: var(--transparent-white);
   text-align: center;
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: 1fr 1fr 1fr;
   min-height: 120px;
   justify-items: center;
   align-items: center;
@@ -600,25 +600,26 @@ input[name="adults-number"], input[name="children-number"] {
 
 .hotel-item {
   padding: 30px;
-  display: grid;
-  grid-template-areas: 
-  "i h h s"
-  "i t p ."
-  "i m b r";
+  display: flex;
+  justify-content: space-between;
 }
 
 .hotel-item img {
   width: 135px;
   height: 90px;
-  grid-area: i;
+  padding-right: 29px;
+}
+
+.hotel-about-field {
+  flex-grow: 1;
 }
 
 .hotel-item h3 {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  grid-area: h;
   margin: 0px;
+  margin-bottom: 10px;
 }
 
 .hotel-name {
@@ -638,21 +639,21 @@ input[name="adults-number"], input[name="children-number"] {
   margin: 0;
 }
 
-.hotel-item .hotel-type {
-  grid-area: t;
+.hotel-info {
+  display: flex;
+  margin-bottom: 10px;
 }
 
-.hotel-item .hotel-price {
-  grid-area: p;
+.hotel-type {
+  min-width: 110px;
 }
 
-.hotel-stars {
+.hotel-item .hotel-stars {
   background-image: url("../img/icon-star.svg");
   background-repeat: repeat-x;
   width: 100px;
   height: 17px;
-  grid-area: s;
-  justify-self: flex-end;
+  margin-bottom: 47px;
 }
 /* Потом через размеры настрою показ 4 звезд, 3 звезд, 2 звезд. Пока width и height сделала для того, чтобы было видно */
 
@@ -660,8 +661,6 @@ input[name="adults-number"], input[name="children-number"] {
   color: var(--asphalt);
   text-align: center;
   background-color: var(--light-beige);
-  grid-area: r;
-  justify-self: flex-end;
 }
 
 /* Hotels buttons */
@@ -671,11 +670,11 @@ input[name="adults-number"], input[name="children-number"] {
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
+  display: inline-block;
 }
 
 .hotel-more-button {
   background-color: var(--light-blue);
-  grid-area: m;
 }
 
 .hotel-more-button:hover, .hotel-more-button:focus {
@@ -689,7 +688,6 @@ input[name="adults-number"], input[name="children-number"] {
 
 .hotel-book-button {
   background-color: var(--light-brown);
-  grid-area: b;
 }
 
 .hotel-book-button:hover, .hotel-book-button:focus {
