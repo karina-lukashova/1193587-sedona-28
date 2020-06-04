@@ -200,7 +200,6 @@ img {
 .reasons-list h3 {
   margin: 0;
   margin-bottom: 25px;
-  font-weight: bold;
   font-size: 21px;
 }
 
@@ -253,11 +252,11 @@ img {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .first-reason-list h4 {
   color: var(--black);
-  font-weight: bold;
   font-size: 21px;
   margin: 0;
   margin-bottom: 25px;
@@ -294,7 +293,6 @@ img {
 
 .booking h2 {
   color: var(--black);
-  font-weight: bold;
   font-size: 30px;
   line-height: 24px;
   margin: 0;
@@ -308,7 +306,6 @@ img {
 
 .booking-button {
   text-align: center;
-  vertical-align: middle;
   font: inherit;
   text-transform: uppercase;
   color: var(--white);
@@ -597,7 +594,6 @@ input[name="adults-number"], input[name="children-number"] {
   border: 2px solid var(--white);
   cursor: pointer;
   text-align: center;
-  vertical-align: middle;
   margin-top: 33px;
   margin-left: 85px;
 }
@@ -725,7 +721,6 @@ input[name="adults-number"], input[name="children-number"] {
 }
 
 .hotel-item h3 {
-  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   margin: 0px;
