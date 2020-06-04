@@ -190,20 +190,57 @@ img {
 .reasons-list {
   text-align: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .reasons-list h3 {
+  margin: 0;
+  margin-bottom: 25px;
   font-weight: bold;
   font-size: 21px;
+}
+
+.reasons-list p {
+  margin: 0;
+}
+
+.reasons-list .reason-number {
+  margin-bottom: 25px;
+}
+
+.first-reason {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-reason {
+  display: flex;
 }
 
 .top-reason-description {
   color: var(--white);
   background-color: var(--light-blue);
+  padding: 50px;
+}
+
+.second-reason-description {
+  order: 1;
+}
+
+.top-reason-description img {
+  width: 800px;
+  height: 256px;
 }
 
 .other-reason {
   background-color: var(--dark-white);
+  padding: 40px 80px;
+  width: 400px;
+  box-sizing: border-box;
 }
 
 .other-reason h3 {
@@ -213,17 +250,26 @@ img {
 .first-reason-list {
   list-style: none;
   background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .first-reason-list h4 {
   color: var(--black);
   font-weight: bold;
   font-size: 21px;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .first-reason-item {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 60px;
+  width: 400px;
+  box-sizing: border-box;
+  padding: 60px;
+  padding-top: 160px;
 }
 
 .reason-house {
@@ -386,6 +432,12 @@ input[name="adults-number"], input[name="children-number"] {
 
 .map {
   text-align: center;
+  min-height: 594px;
+}
+
+.map img {
+  width: 1200px;
+  height: 594px;
 }
 
 /* Footer */
@@ -487,13 +539,47 @@ input[name="adults-number"], input[name="children-number"] {
   color: var(--white);
 }
 
+.hotels-filter-form {
+  display: flex;
+  padding: 30px 73px;
+}
+
+.hotels-filter-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hotels-filter-form .filter-fieldset {
+  margin-right: 119px;
+}
+
+.hotels-filter-form .price-fieldset {
+  margin-left: auto;
+}
+
+
+
 .hotels-filter legend {
   font-weight: bold;
   font-size: 16px;
+  margin-bottom: 24px;
 }
 
 .filter-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-list li {
+  margin-bottom: 25px;
+  padding-left: 45px;
+}
+/* Padding поставила для того, чтобы потом иконку чекбокса вставить */
+
+.filter-list li:last-of-type {
+  margin-bottom: 0;
 }
 
 .price-input {
@@ -512,6 +598,8 @@ input[name="adults-number"], input[name="children-number"] {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
+  margin-top: 33px;
+  margin-left: 85px;
 }
 
 .filter-button:hover, .filter-button:focus {
@@ -528,6 +616,9 @@ input[name="adults-number"], input[name="children-number"] {
 
 .sorting-section {
   background-color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: 30px 73px;
 }
 
 .hotels-number {
@@ -535,6 +626,8 @@ input[name="adults-number"], input[name="children-number"] {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  margin: 0;
+  margin-right: 46px;
 }
 
 .sorting {
@@ -542,8 +635,20 @@ input[name="adults-number"], input[name="children-number"] {
   line-height: 18px;
 }
 
+.sorting-heading {
+  margin: 0;
+  margin-right: 40px;
+}
+
 .sorting-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sorting-direction-list {
+  margin-left: auto;
 }
 
 /* Sorting buttons */
@@ -556,6 +661,7 @@ input[name="adults-number"], input[name="children-number"] {
 .sorting-item {
   cursor: pointer;
   color: var(--sorting-transparent-black);
+  margin-right: 32px;
 }
 /* Нижнюю рамку сделаю позже */
 
@@ -582,6 +688,10 @@ input[name="adults-number"], input[name="children-number"] {
 
 .sorting-direction-item[href]:active svg {
   fill: var(--light-blue);
+}
+
+.sorting-to-top {
+  margin-right: 12px;
 }
 
 /* Hotels list */
