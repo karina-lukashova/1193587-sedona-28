@@ -97,7 +97,6 @@ img {
   margin: 0 auto;
   box-shadow: 0px 5px 15px var(--site-transparent-black);
 }
-/* Перенесла box-shadow на контейнеры, т.к. при задавании для отдельной секции тень появлялась вокруг всей этой секции, а мне это не надо :) */
 
 /* Header */
 
@@ -132,7 +131,7 @@ img {
 }
 
 .nav-item {
-  width: 25%;
+  width: 228px;
   padding: 15px 0;
 }
 
@@ -142,6 +141,14 @@ img {
 
 .nav-item-right {
   text-align: right;
+}
+
+.nav-item-photo {
+  margin-right: auto;
+}
+
+.nav-item-map {
+  margin-left: auto;
 }
 
 .navigation-list a {
@@ -561,6 +568,7 @@ input[name="adults-number"], input[name="children-number"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .contacts p {
