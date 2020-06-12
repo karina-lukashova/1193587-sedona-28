@@ -2,16 +2,18 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/ptsans_new.woff2") format("woff2"), /* Обновила шрифты, потому что знак № в преимуществах Седоны со старыми шрифтами неверно показывался */
-       url("../fonts/ptsans_new.woff") format("woff");
+  src:
+    url("../fonts/ptsans_new.woff2") format("woff2"),
+    url("../fonts/ptsans_new.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/ptsansbold_new.woff2") format("woff2"), /* Обновила шрифты, потому что знак № в преимуществах Седоны со старыми шрифтами неверно показывался */
-       url("../fonts/ptsansbold_new.woff") format("woff");
+  src:
+    url("../fonts/ptsansbold_new.woff2") format("woff2"),
+    url("../fonts/ptsansbold_new.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -175,7 +177,7 @@ img {
 
 .site-intro {
   background-color: var(--dark-blue);
-  background-image: 
+  background-image:
     url("../img/mask.svg"),
     url("../img/background.jpg");
   background-repeat: no-repeat;
@@ -226,9 +228,14 @@ img {
 }
 
 .reasons-list h3 {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 27px;
   font-size: 21px;
+  width: 122px;
+}
+
+.reasons-list .second-reason-heading {
+  width: 160px;
 }
 
 .reasons-list p {
@@ -251,12 +258,16 @@ img {
 .top-reason-description {
   color: var(--white);
   background-color: var(--light-blue);
-  padding: 50px;
+  padding: 49px 47px;
+  width: 400px;
+  box-sizing: border-box;
 }
+/* Width и box-sizing сделала, чтобы одинаково смотрелось в разных браузерах */
 
 .first-reason-description {
   padding-top: 47px;
 }
+
 .second-reason-description {
   order: 1;
   padding-right: 49px;
@@ -269,10 +280,17 @@ img {
 
 .other-reason {
   background-color: var(--dark-white);
-  padding: 47px 71px;
+  padding-right: 71px;
+  padding-left: 71px;
+  padding-top: 45px;
   padding-bottom: 54px;
   width: 400px;
   box-sizing: border-box;
+}
+
+.fourth-reason {
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 .other-reason h3 {
@@ -548,6 +566,7 @@ input[name="adults-number"], input[name="children-number"] {
 }
 
 /* Footer */
+
 .footer {
   background-color: var(--transparent-white);
   text-align: center;
@@ -563,7 +582,6 @@ input[name="adults-number"], input[name="children-number"] {
   padding-bottom: 5px;
   box-sizing: border-box;
 }
-/* Сделала небольшой padding-bottom, т.к. все блоки футера немного не попадали в макет */
 
 .footer-hotels {
   margin-top: 0;
@@ -669,7 +687,6 @@ input[name="adults-number"], input[name="children-number"] {
   fill: var(--dark-beige);
 }
 
-
 /* Hotels page */
 
 /* Hotels filter */
@@ -733,30 +750,26 @@ input[name="adults-number"], input[name="children-number"] {
   margin-bottom: 0;
 }
 
-.filter-checkbox + label::before {
-  content: "";
-  position: absolute;
-  left: -40px;
-  width: 23px;
-  height: 23px;
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.filter-checkbox:disabled + label::before {
-  background-image: url("../img/checkbox-off-disabled.svg");
-}
-
-.filter-checkbox:checked + label::after {
+.filter-checkbox + label::before, .filter-checkbox:checked + label::after {
   content: "";
   position: absolute;
   left: -40px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-checkbox + label::before {
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.filter-checkbox:checked + label::after {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-checkbox:disabled + label::before {
+  background-image: url("../img/checkbox-off-disabled.svg");
 }
 
 .filter-checkbox:checked:disabled + label::after {
@@ -823,6 +836,7 @@ input[name="adults-number"], input[name="children-number"] {
   width: 19px;
   height: 21px;
   background-image: url(../img/filter-price.svg);
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -1013,7 +1027,6 @@ input[name="adults-number"], input[name="children-number"] {
   min-width: 110px;
   padding-right: 7px;
 }
-/* Padding сделала, чтобы при увеличении контента hotel-type не сливался с ценой */
 
 .hotel-rating-field {
   display: flex;
