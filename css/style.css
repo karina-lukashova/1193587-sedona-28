@@ -706,12 +706,12 @@ input[name="adults-number"], input[name="children-number"] {
 .hotels-filter {
   background-color: var(--dark-blue);
   background-image: url(../img/filter-background.jpg);
-  background-repeat: no-repeat;
+  background-repeat: round;
   background-position: center top;
   color: var(--white);
   min-height: 217px;
 }
-/* При переполнении картинка будет сверху, а ниже будет идти однотонный синий фон - так симпатичнее */
+/* При переполнении картинка будет красиво растягиваться */
 
 .hotels-filter-form {
   display: flex;
