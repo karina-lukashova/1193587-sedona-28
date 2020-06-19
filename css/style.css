@@ -576,8 +576,8 @@ input[name="adults-number"], input[name="children-number"] {
 /* Map */
 
 .map {
-  text-align: center;
   min-height: 594px;
+  background-color: var(--beige);
   background-image: url(../img/map.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
