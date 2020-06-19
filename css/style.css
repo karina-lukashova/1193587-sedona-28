@@ -506,6 +506,11 @@ input[name="adults-number"], input[name="children-number"] {
 
 .booking-form-section input::-moz-placeholder {
   color: var(--black);
+  opacity:1;
+}
+
+.booking-form-section input::placeholder {
+  color: var(--black);
 }
 
 /* Booking form - buttons */
