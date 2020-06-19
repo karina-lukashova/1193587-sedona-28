@@ -31,6 +31,7 @@ if (storageAdults && storageChildren) {
 // Открывает и закрывает секцию с формой поиска
 bookingButton.addEventListener("click", function () {
   bookingFormSection.classList.toggle("booking-form-closed");
+  bookingFormSection.classList.remove("booking-form-error");
 })
 
 // Добавляют и уменьшают количество взрослых и детей при клике на плюс/минус

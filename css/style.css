@@ -209,8 +209,9 @@ img {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 45px;
+  width: 470px;
 }
 
 .reasons-intro {
@@ -414,7 +415,8 @@ img {
 }
 
 .booking-form-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .booking-form {
@@ -426,7 +428,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  animation: appearance 0.8s;
+  -webkit-animation: appearance 0.8s;
+          animation: appearance 0.8s;
 }
 
 .booking-form-item {
@@ -511,6 +514,7 @@ input[name="adults-number"], input[name="children-number"] {
   border: none;
   cursor: pointer;
   position: absolute;
+  background-color: var(--light-beige);
 }
 
 .calendar-icon {
@@ -1141,6 +1145,15 @@ input[name="adults-number"], input[name="children-number"] {
 
 /* Booking form animation */
 
+@-webkit-keyframes appearance {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes appearance {
   0% {
     transform: translateY(-100%);
@@ -1151,6 +1164,18 @@ input[name="adults-number"], input[name="children-number"] {
 }
 
 /* Booking form - shake anumbation for errors */
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(-50%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-55%);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(-45%);
+  }
+}
 
 @keyframes shake {
   0%, 100% {
