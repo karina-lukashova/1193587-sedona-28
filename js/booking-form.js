@@ -28,7 +28,7 @@ if (storageAdults && storageChildren) {
   childrenInput.value = storageChildren;
 }
 
-// Закрывает и открываем секцию с формой поиска
+// Открывает и закрывает секцию с формой поиска
 bookingButton.addEventListener("click", function () {
   bookingFormSection.classList.toggle("booking-form-closed");
 })
