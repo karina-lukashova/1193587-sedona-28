@@ -227,8 +227,9 @@ img {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  background-color: var(--dark-white);
 }
 
 .reasons-list h3 {
@@ -404,6 +405,7 @@ img {
 
 .booking-form-section {
   position: absolute;
+  z-index: 3;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -587,13 +589,26 @@ input[name="adults-number"], input[name="children-number"] {
 .map {
   min-height: 594px;
   background-color: var(--beige);
-  background-image: url(../img/map.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  position: relative;
+}
+
+.map p {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .map iframe {
   border: none;
+  position: relative;
+  z-index: 2;
+}
+
+.map img {
+  width: 1200px;
+  height: 594px;
 }
 
 /* Footer */
@@ -608,7 +623,7 @@ input[name="adults-number"], input[name="children-number"] {
   min-height: 126px;
   margin-top: -126px;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   padding: 0 53px;
   padding-bottom: 5px;
   box-sizing: border-box;
